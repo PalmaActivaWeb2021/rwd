@@ -1,0 +1,53 @@
+$media-smartphone: 320px;
+$media-ipad: 768px;
+$media-desktop: 1000px;
+
+body {
+    // versión SMARTPHONE (Mobile First)
+    background-color: green;
+
+    // versión IPAD
+    @media only screen and (min-width: $media-ipad) {
+        background-color: brown;
+    }
+    // versión DESKTOP
+    @media only screen and (min-width: $media-desktop) {
+        background-color: #38cfc3;
+    }
+}
+p {
+    color: blue;
+}
+.banner {
+    width: 100px;
+    @media only screen and (min-width: $media-desktop) {
+        width: 100%;
+    }
+}
+
+// FOOTER
+footer {
+    // mapa
+    .map {
+        width: 100vw;
+        height: 200px;
+    }
+    // localización
+    .localizacion {
+        // smartphone 1x3
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: [direccion]100vw [telefono]100vw [formulario]100vw;
+        // desktop 2x1
+        @media only screen and (min-width: 1000px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        }
+    }
+
+    // copy
+    .copy {
+        width: 100vw;
+        text-align: center;
+    }
+}

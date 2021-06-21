@@ -1,0 +1,37 @@
+/* ESTADO smartphone */
+/* Mobile First */
+/* STANTARD */
+@media only screen and (min-width: 300px) and (max-width: 450px) {
+body {
+    background-color: green;
+}
+p{
+    color: blue;
+}
+.banner{
+    width: 100px;
+}
+}
+
+/* ESTADO iPad */
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: red;
+    }
+    .banner{
+        width: 300px;
+    }
+}
+
+/* ESTADO Desktop */
+@media only screen and (min-width: 1000px) {
+    body {
+        background-color: yellow;
+    }
+    p{
+        color: green;
+    }
+    .banner{
+        width: 500px;
+    }
+}
